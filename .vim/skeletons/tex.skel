@@ -1,0 +1,22 @@
+% File: Document Name
+% Author: James Rutherford
+% Last updated: 2006-02-21
+% Word count:
+ 
+\documentclass[a4paper,10pt]{article}
+\usepackage[bottom]{footmisc}
+\usepackage{fullpage}
+\date{}
+
+\title{}
+\author{James Rutherford}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+\end{document}
+
+% vim:tw=80:ts=4:sw=4:
