@@ -24,3 +24,6 @@ function gswitch {
     export GIT_PREVIOUS_BRANCH=$CURRENT
     git checkout $TARGET
 }
+
+# auto-complete git branches for gswitch
+compdef _git gswitch=git-cherry-pick
