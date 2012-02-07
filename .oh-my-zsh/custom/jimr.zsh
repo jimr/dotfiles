@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000
-X=$(which most)
+X=$(which most 2> /dev/null)
 [[ $? = 1 ]] && PAGER=less || PAGER=most
 export PAGER
 
@@ -129,8 +129,6 @@ function create_session() {
         NUM_WINDOWS=${2:=0}
         tmux -2 new-session -d -s $SESSION_NAME -n zsh
 
-        tmux set-option -t$SESSION_NAME update-environment \
-            "WORKON_HOME PIP_VIRTUALENV_BASE PIP_RESPECT_VIRTUALENV VIRTUAL_ENV PYTHONPATH DJANGO_SETTINGS_MODULE DJANGO_DEVELOPMENT"
         tmux set-option -t$SESSION_NAME default-path $(pwd)
 
         # these environment variables should be inherited into the session
@@ -140,7 +138,15 @@ function create_session() {
         tmux set-environment -gr DJANGO_SETTINGS_MODULE
         tmux set-environment -gr DJANGO_DEVELOPMENT
 
-        tmux set-environment -t$SESSION_NAME VIRTUAL_ENV $VIRTUAL_ENV
+        if [[ -n $VIRTUAL_ENV ]]; then
+            echo "setting VIRTUAL_ENV=$VIRTUAL_ENV"
+            tmux set-environment -t$SESSION_NAME VIRTUAL_ENV $VIRTUAL_ENV
+        else
+            echo "un-setting VIRTUAL_ENV:"
+            tmux set-environment -u VIRTUAL_ENV
+            tmux set-environment -r VIRTUAL_ENV
+        fi
+
         tmux set-environment -t$SESSION_NAME PYTHONPATH $PYTHONPATH
         tmux set-environment -t$SESSION_NAME DJANGO_SETTINGS_MODULE $DJANGO_SETTINGS_MODULE
         tmux set-environment -t$SESSION_NAME DJANGO_DEVELOPMENT $DJANGO_DEVELOPMENT
@@ -186,7 +192,7 @@ function conflicts() {
 
 function scm_diff() {
     if [ -d .svn ]; then
-        svn diff $@ | source-highlight --out-format=esc --src-lang=diff | most
+        svn diff $@ | source-highlight --out-format=esc --src-lang=diff | $PAGER
     fi
     if [ -d .hg ]; then
         hg diff $@
