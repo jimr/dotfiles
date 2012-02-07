@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2012-01-31
+" Last Updated: 2012-02-07
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -143,7 +143,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Soares/vim-snipmate'
+Bundle 'msanders/snipmate.vim'
 
 " vim.org scripts
 Bundle 'L9'
@@ -156,3 +156,4 @@ Bundle 'PySmell'
 Bundle 'pylint.vim'
 Bundle 'pyflakes.vim'
 Bundle 'tslime.vim'
+Bundle 'python_match.vim'
