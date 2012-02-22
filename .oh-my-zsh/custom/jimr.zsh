@@ -73,7 +73,7 @@ function workon () {
 
 if [[ $TMUX != "" ]]; then
     venv=$(tmux show-environment | grep VIRTUAL_ENV | cut -d "=" -f 2)
-    if [[ $(echo $venv | sed 's/^-.*/MATCH/') != "MATCH" ]]; then
+    if [[ $venv != "" ]] && [[ $(echo $venv | sed 's/^-.*/MATCH/') != "MATCH" ]]; then
         export VIRTUAL_ENV=$venv
         # we only do this if we're running inside a tmux session
         PROJ=$(echo $VIRTUAL_ENV | sed 's#.*/\(.*\)#\1#')

@@ -1,7 +1,7 @@
 " File: maps.vim
 " Author: James Rutherford
 " Created: 2005-05-07
-" Last Updated: 2012-02-08
+" Last Updated: 2012-02-14
 " Description: A collection of keymappings to make common tasks accessible
 " with fewer keystrokes.
 " Usage: Usually lives in the plugin directory and is automatically sourced at
@@ -166,5 +166,5 @@ noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
 
-" \\ in normal mode to save
-noremap <Bslash><Bslash> :w<CR>
+" ; in normal mode to save
+noremap ; :w<CR>

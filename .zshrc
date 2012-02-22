@@ -30,7 +30,7 @@ ZSH_THEME="jimr"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git django pip python git_extras jimr django_extras)
+plugins=(vi-mode git django pip python git_extras jimr django_extras)
 
 source $ZSH/oh-my-zsh.sh
 
