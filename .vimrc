@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2012-03-16
+" Last Updated: 2012-04-06
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -120,16 +120,19 @@ filetype indent on
 "highlight OverLength ctermbg=black ctermfg=red guibg=#592929
 "match OverLength /\%81v.\+/
 
-" set up some nice colours with the solarized scheme
-let g:solarized_termcolors=256
-set background=dark     " default to dark background
-colorscheme solarized
-
 " could be in here, but it's crowded already!
 source ~/.vim/jimr/autocmd.vim
 source ~/.vim/jimr/maps.vim
 source ~/.vim/jimr/plugins.vim
 source ~/.vim/jimr/pymaps.vim
+
+" set up some nice colours with the solarized scheme
+let g:solarized_style="dark"
+let g:solarized_contrast="high"
+let g:solarized_termcolors=256
+let g:solarized_visibility="high"
+set background=dark     " default to dark background
+"colorscheme solarized
 
 " Vundle for bundle management!
 set rtp+=~/.vim/bundle/vundle/
@@ -145,6 +148,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'nvie/vim-flake8'
+Bundle 'juvenn/mustache.vim'
 
 " vim.org scripts
 Bundle 'L9'
@@ -158,3 +162,4 @@ Bundle 'pylint.vim'
 Bundle 'pyflakes.vim'
 Bundle 'tslime.vim'
 Bundle 'python_match.vim'
+Bundle 'vim-coffee-script'
