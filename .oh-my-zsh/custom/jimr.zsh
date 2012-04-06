@@ -21,19 +21,19 @@ unsetopt share_history
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/jim/.zshrc'
+zstyle :compinstall filename '/home/jrutherford/.zshrc'
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-keychain ~/.ssh/id_dsa &>/dev/null
-. ~/.keychain/*-sh
+#keychain ~/.ssh/id_dsa &>/dev/null
+#. ~/.keychain/*-sh
 
 # use rsync to resume partial scp transfers
 alias scpr="rsync --partial --progress --rsh=ssh"
 
-export PYTHONSTARTUP=/home/jim/.pystartup
+export PYTHONSTARTUP=/home/jrutherford/.pystartup
 
 function setdsm() {
     # add the current directory and the parent directory to PYTHONPATH
