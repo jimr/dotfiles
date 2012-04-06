@@ -1,7 +1,7 @@
 " File: autocmd.vim
 " Author: James Rutherford
 " Created: 2005-05-07
-" Last Updated: 2012-03-26
+" Last Updated: 2012-04-06
 " Description: A collections of automated actions that are triggered by some
 " internal event.
 " Usage: Usually lives in the plugin directory and is automatically sourced at
@@ -103,6 +103,9 @@ if has("autocmd")
         " set up coffeescript
         autocmd BufRead,BufNewFile *.coffee set ft=coffee ts=2 sts=2 tw=2 sw=2
         autocmd BufRead,BufNewFile *.eco set ft=eco
+
+        " usually, it's going to be zsh rather than just sh
+        autocmd BufRead,BufNewFile *.sh set ft=zsh
 
 		" some things for jcommenter.vim
 		autocmd FileType java let b:jcommenter_class_author='James Rutherford'
