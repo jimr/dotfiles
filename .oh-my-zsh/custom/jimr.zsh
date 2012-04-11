@@ -5,6 +5,7 @@ SAVEHIST=1000
 X=$(which most 2> /dev/null)
 [[ $? = 1 ]] && PAGER=less || PAGER=most
 export PAGER
+export EDITOR=vim
 
 export JAVA_HOME=/usr/lib/jvm/default-java
 
