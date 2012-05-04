@@ -206,3 +206,6 @@ function scm_diff() {
 alias vvim="vim -O"
 
 alias vipython="python ~/src/ipython/ipython.py"
+
+. ~/src/nvm/nvm.sh
+. ~/.rvm/scripts/rvm
