@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2012-04-06
+" Last Updated: 2012-05-01
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -149,6 +149,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'juvenn/mustache.vim'
+Bundle 'kien/ctrlp.vim'
 
 " vim.org scripts
 Bundle 'L9'
