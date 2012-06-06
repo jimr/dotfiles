@@ -3,3 +3,6 @@
 
 --type-set
 eco=.eco,.jeco
+
+--type-set
+coffee=.coffee
