@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2012-05-01
+" Last Updated: 2012-06-29
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -164,3 +164,4 @@ Bundle 'pyflakes.vim'
 Bundle 'tslime.vim'
 Bundle 'python_match.vim'
 Bundle 'vim-coffee-script'
+Bundle 'csv.vim'

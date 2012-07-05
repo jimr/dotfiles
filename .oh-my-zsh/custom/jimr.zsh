@@ -175,6 +175,18 @@ function up() {
     fi
 }
 
+function full_up() {
+    if [ -d .git ]; then
+        for remote in $(git remote); do
+            echo "git pull $remote $(current_branch)"
+            git pull $remote $(current_branch) || break
+        done
+    else
+        echo "$(pwd) is not a git repo"
+    fi
+}
+alias fu=full_up
+
 function st() {
     if [ -d .svn ]; then
         svn status
@@ -209,3 +221,6 @@ alias vipython="python ~/src/ipython/ipython.py"
 
 . ~/src/nvm/nvm.sh
 . ~/.rvm/scripts/rvm
+
+alias gcp="git checkout -"
+alias galias="alias | grep git | egrep -v \"(svn|galias)\" | sed \"s/\(\w\)='\?\([^']*\)'\?$/\1\t= \2/\""
