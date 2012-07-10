@@ -10,3 +10,7 @@ keycode 171 = F9
 keycode 121 = F10
 keycode 122 = F11
 keycode 123 = F12
+
+keycode 77 = Insert
+keycode 191 = Insert
+keycode 192 = Print
