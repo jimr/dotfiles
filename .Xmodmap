@@ -18,8 +18,9 @@ keycode 77 = Insert
 keycode 191 = Insert
 keycode 192 = Print
 
-! put backslash next to z where it belongs
+! put backslash next to z where it belongs & backtick above tab
 keycode 49 = backslash bar
+keycode 94 = grave asciitilde
 
 ! swap alt & super
 keycode 133 = Alt_L

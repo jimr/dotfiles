@@ -15,3 +15,11 @@ so you'll need to define, e.g.: ``folder``, ``spoolfile``, ``smtp_url`` and any
 other mailbox settings in a new configuration file under ``~/.mutt`` and source
 it from your ``.muttrc``.
 
+
+.Xmodmap
+========
+
+The ``.Xmodmap`` file included is for use with a UK Apple USB keyboard. Mostly,
+it just puts things back where you would expect them to be (apart from ``Ins``
+which I can't fix).
+
