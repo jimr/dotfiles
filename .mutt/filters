@@ -1,0 +1,4 @@
+# Example save hook. man muttrc for more info.
+#save-hook "~C joe.bloggs@example.com" +Junk
+
+# vim: set syntax=muttrc:

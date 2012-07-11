@@ -34,3 +34,13 @@ source ~/.mutt/my_mailbox_settings
 # I'd recommend the solarized colour scheme (for everything), so if you have
 # it, update the path & uncomment.
 #source /path/to/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+
+# If you don't want / have solarized, there are some nice colours in
+# .mutt/colours
+#source ~/.mutt/colours
+
+# Set up a filters file for default save hooks
+source ~/.mutt/filters
+
+# The sidebar gives you a nice folder browser as a left pane ('b' to toggle)
+source ~/.mutt/sidebar
