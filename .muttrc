@@ -1,0 +1,36 @@
+# Ignore most headers
+ignore headers *
+unignore headers from to subject date cc
+
+# Don't show line-wrap markers, and sort by date
+set markers=no
+set sort=threads
+set sort_aux=last-date-received
+set move=no
+set nomark_old
+set confirmappend=no
+
+set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %?M?[+%M]? %s"
+
+macro index Z '<collapse-thread>'
+set collapse_unread=no # refuse to collapse threads with unread messages
+folder-hook . "push \eV"
+
+set realname="James Rutherford"
+set use_from=yes
+set quit=ask-yes
+
+set header_cache="~/.mutt/header_cache"
+set message_cachedir="~/.mutt/message_cache/"
+set forward_format="Fw: %s"
+
+# Uncomment query_command if you have a script for querying an address book, or
+# the alias_file if you want to maintain one by hand locally
+#set query_command = "/path/to/ldap_search.py '%s'" 
+#set alias_file=~/.mutt/aliases
+
+source ~/.mutt/my_mailbox_settings
+
+# I'd recommend the solarized colour scheme (for everything), so if you have
+# it, update the path & uncomment.
+#source /path/to/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
