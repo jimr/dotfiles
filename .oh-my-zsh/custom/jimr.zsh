@@ -229,8 +229,8 @@ alias vvim="vim -O"
 
 alias vipython="python ~/src/ipython/ipython.py"
 
-. ~/src/nvm/nvm.sh
-. ~/.rvm/scripts/rvm
+[[ -f ~/src/nvm/nvm.sh ]] && . ~/src/nvm/nvm.sh
+[[ -f ~/.rvm/scripts/rvm ]] && . ~/.rvm/scripts/rvm
 
 alias gcp="git checkout -"
 alias galias="alias | grep git | egrep -v \"(svn|galias)\" | sed \"s/\(\w\)='\?\([^']*\)'\?$/\1\t= \2/\""

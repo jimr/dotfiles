@@ -23,3 +23,17 @@ The ``.Xmodmap`` file included is for use with a UK Apple USB keyboard. Mostly,
 it just puts things back where you would expect them to be (apart from ``Ins``
 which I can't fix).
 
+
+.oh-my-zsh
+==========
+
+First, clone the upstream repo into ``$HOME``::
+
+    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+
+then just symlink everything from ``.oh-my-zsh/custom`` into
+``~/.oh-my-zsh/custom``::
+
+    cd /path/to/dotfiles/checkout
+    ln -s $(pwd)/.oh-my-zsh/custom/* ~/.oh-my-zsh/custom
+
