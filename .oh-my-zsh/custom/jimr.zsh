@@ -135,6 +135,7 @@ function create_session() {
         # these environment variables should be inherited into the session
         # being created, but blocked from entering into the global environment
         tmux set-environment -gr VIRTUAL_ENV
+        tmux set-environment -gr VIRTUALENVWRAPPER_PYTHON
         tmux set-environment -gr PYTHONPATH
         tmux set-environment -gr DJANGO_SETTINGS_MODULE
         tmux set-environment -gr DJANGO_DEVELOPMENT
@@ -146,6 +147,15 @@ function create_session() {
             echo "un-setting VIRTUAL_ENV:"
             tmux set-environment -u VIRTUAL_ENV
             tmux set-environment -r VIRTUAL_ENV
+        fi
+
+        if [[ -n $VIRTUALENVWRAPPER_PYTHON ]]; then
+            echo "setting VIRTUALENVWRAPPER_PYTHON=$VIRTUALENVWRAPPER_PYTHON"
+            tmux set-environment -t$SESSION_NAME VIRTUALENVWRAPPER_PYTHON $VIRTUALENVWRAPPER_PYTHON
+        else
+            echo "un-setting VIRTUALENVWRAPPER_PYTHON:"
+            tmux set-environment -u VIRTUALENVWRAPPER_PYTHON
+            tmux set-environment -r VIRTUALENVWRAPPER_PYTHON
         fi
 
         tmux set-environment -t$SESSION_NAME PYTHONPATH $PYTHONPATH
