@@ -8,7 +8,7 @@ Config { font = "xft:Monospaced-8:normal"
                     , Run Swap [] 10
                     , Run Date "%a %b %_d %l:%M" "date" 10
                     , Run StdinReader
-                    , Run Battery ["-t", "<acstatus><watts><left>%", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>⚡</fc>", "-o", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 1
+                    , Run Battery ["-t", "<acstatus><watts><left>%", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>⚡</fc>", "-o", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 600
                     ]
        , sepChar = "%"
        , alignSep = "}{"
