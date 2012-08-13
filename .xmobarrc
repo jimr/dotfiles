@@ -1,17 +1,15 @@
 Config { font = "xft:Monospaced-8:normal"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = TopW L 90
+       , position = Static { xpos = 0 , ypos = 0, width = 1920, height = 15 }
        , commands = [ Run Weather "EGGD" ["-t"," <tempC>C","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
                     , Run MultiCpu ["-t","CPU %: <autototal>","-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 100
                     , Run Swap [] 100
                     , Run Date "%a %b %_d %l:%M" "date" 50
                     , Run StdinReader
-                    , Run Battery ["-t", "<acstatus><watts><left>%", "-L", "10", "-H", "80", "-p", "3", "--", "-O", "<fc=green>⚡</fc>", "-o", "", "-L", "-15", "-H", "-5", "-l", "red", "-m", "blue", "-h", "green"] 600
-                    , Run Wireless "wlan0" ["-t","<essid> <qualitybar>","-L","25","-H","75","--low","#FF0000","--normal","#F9FF00","--high","#00FF00"] 100
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %multicpu% | %memory% | %swap% | %battery% | %wlan0wi% | <fc=#ee9a00>%date%</fc> | %EGGD%"
+       , template = "%StdinReader% }{ %multicpu% | %memory% | %swap% | <fc=#ee9a00>%date%</fc> | %EGGD%"
        }
