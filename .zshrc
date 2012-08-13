@@ -34,6 +34,11 @@ plugins=(vi-mode git django pip python git_extras jimr django_extras ruby rvm)
 
 source $ZSH/oh-my-zsh.sh
 
+# Don't autocomplete things starting with . or _ unless I say so!
+CORRECT_IGNORE='[._]*'
+
+unsetopt CORRECTALL
+
 # Customize to your needs...
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
