@@ -11,5 +11,5 @@ Config { font = "xft:Monospaced-8:normal"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %multicpu% | %memory% | %swap% | <fc=#ee9a00>%date%</fc> | %EGGD%"
+       , template = "%StdinReader% }{ %multicpu%      %memory%      %swap%      <fc=#ee9a00>%date%</fc>      %EGGD%"
        }
