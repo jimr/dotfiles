@@ -34,6 +34,7 @@ main = do
         }
         `additionalKeys`
         [ ((mod4Mask, xK_b), sendMessage ToggleStruts)
+        , ((mod4Mask, xK_p), spawn "dmenu_run")
         , ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((mod4Mask, xK_x), spawn "xmodmap /home/jrutherford/.Xmodmap")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")

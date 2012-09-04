@@ -1,27 +1,3 @@
-! F<n> without the fn (who needs media keys?!)
-keycode 232 = F1
-keycode 233 = F2
-keycode 128 = F3
-keycode 212 = F4
-keycode 237 = F5
-keycode 238 = F6
-keycode 173 = F7
-keycode 172 = F8
-keycode 171 = F9
-keycode 121 = F10
-keycode 122 = F11
-keycode 123 = F12
-
-! apple put 'fn' where insert should be, but it has no keycode, so we
-! approximate by position & use F13 & the weird thing above '7' on the numpad.
-keycode 77 = Insert
-keycode 191 = Insert
-keycode 192 = Print
-
-! put backslash next to z where it belongs & backtick above tab
-keycode 49 = backslash bar
-keycode 94 = grave asciitilde
-
-! swap alt & super
-keycode 133 = Alt_L
-keycode 64 = Super_L
+keycode 121 = XF86AudioMute
+keycode 122 = XF86AudioLowerVolume
+keycode 123 = XF86AudioRaiseVolume
