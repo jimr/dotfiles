@@ -36,4 +36,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.cabal/bin
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias history="fc -i -l 1"
+
+export PATH=$PATH:$HOME/.rvm/bin:$HOME/.cabal/bin

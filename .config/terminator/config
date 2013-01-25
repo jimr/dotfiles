@@ -8,16 +8,15 @@
   [[default]]
     scrollbar_position = hidden
     palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#93a1a1"
-    copy_on_selection = True
+    font = Monospace 8
     background_darkness = 0.9
     background_type = transparent
     use_system_font = False
     cursor_color = "#eee8d5"
-    foreground_color = "#eee8d5"
+    foreground_color = "#ffffff"
     login_shell = True
     show_titlebar = False
-    font = Monospace 8
-    background_color = "#002b36"
+    copy_on_selection = True
     allow_bold = False
     scrollback_infinite = True
   [[Light]]
@@ -30,6 +29,8 @@
     foreground_color = "#002b36"
     background_color = "#eee8d5"
     scrollback_infinite = True
+  [[dark]]
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
 [layouts]
   [[default]]
     [[[child1]]]
