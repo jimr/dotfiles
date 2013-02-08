@@ -225,6 +225,20 @@ function scm_diff() {
     fi
 }
 
+function hg_prompt_info {
+    st=$(hg status 2> /dev/null) || return
+    mod=$(hg prompt "{status|modified}" 2> /dev/null)
+    pre=$(hg prompt "{branch}{-->[+{outgoing|count}]}" 2> /dev/null)
+
+    echo -n $ZSH_THEME_GIT_PROMPT_PREFIX | sed 's/git/hg/'
+    echo -n $pre
+    if [[ $mod = "!" ]]; then
+        echo $ZSH_THEME_GIT_PROMPT_DIRTY
+    else
+        echo $ZSH_THEME_GIT_PROMPT_CLEAN
+    fi
+}
+
 alias vvim="vim -O"
 
 alias vipython="python ~/src/ipython/ipython.py"
@@ -234,3 +248,4 @@ alias vipython="python ~/src/ipython/ipython.py"
 
 alias gcp="git checkout -"
 alias galias="alias | grep git | egrep -v \"(svn|galias)\" | sed \"s/\(\w\)='\?\([^']*\)'\?$/\1\t= \2/\""
+alias halias="alias | grep hg | egrep -v \"(halias)\" | sed \"s/\(\w\)='\?\([^']*\)'\?$/\1\t= \2/\""
