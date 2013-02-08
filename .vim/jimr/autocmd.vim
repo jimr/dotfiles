@@ -14,8 +14,7 @@ if has("autocmd")
 		autocmd BufNewFile *.py
 			\ 0put =\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\"|$
 		autocmd BufNewFile *.rb
-			\ 0put =\"#!/usr/bin/env ruby
-			\ \<nl># -*- coding: None -*-\<nl>\"|$
+			\ 0put =\"#!/usr/bin/env ruby\<nl># -*- coding: None -*-\<nl>\"|$
 		autocmd BufNewFile *.sh
 			\ 0put =\"#!/bin/bash\<nl>\"|$
 		autocmd BufNewFile *.pl
