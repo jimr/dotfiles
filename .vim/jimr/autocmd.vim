@@ -1,7 +1,7 @@
 " File: autocmd.vim
 " Author: James Rutherford
 " Created: 2005-05-07
-" Last Updated: 2012-05-29
+" Last Updated: 2013-02-08
 " Description: A collections of automated actions that are triggered by some
 " internal event.
 " Usage: Usually lives in the plugin directory and is automatically sourced at
@@ -12,11 +12,9 @@ if has("autocmd")
 	augroup Shebang
 	  au!
 		autocmd BufNewFile *.py
-			\ 0put =\"#!/usr/bin/env python
-			\ \<nl># -*- coding: iso-8859-15 -*-\<nl>\"|$
+			\ 0put =\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\"|$
 		autocmd BufNewFile *.rb
-			\ 0put =\"#!/usr/bin/env ruby
-			\ \<nl># -*- coding: None -*-\<nl>\"|$
+			\ 0put =\"#!/usr/bin/env ruby\<nl># -*- coding: None -*-\<nl>\"|$
 		autocmd BufNewFile *.sh
 			\ 0put =\"#!/bin/bash\<nl>\"|$
 		autocmd BufNewFile *.pl
@@ -103,7 +101,7 @@ if has("autocmd")
         " set up coffeescript
         autocmd BufRead,BufNewFile *.coffee set ft=coffee ts=2 sts=2 sw=2
         autocmd BufRead,BufNewFile *.eco set ft=eco
-		autocmd BufWritePost,FileWritePost *.eco :!eco %
+"		autocmd BufWritePost,FileWritePost *.eco :!eco %
 "		autocmd BufWritePost,FileWritePost *\(.eco\|.jeco\) :!eco %
 
         " usually, it's going to be zsh rather than just sh

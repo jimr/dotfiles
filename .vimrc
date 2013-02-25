@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2012-06-29
+" Last Updated: 2013-02-08
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -134,6 +134,8 @@ let g:solarized_visibility="high"
 set background=dark     " default to dark background
 "colorscheme solarized
 
+highlight SpellBad term=underline gui=undercurl guisp=Orange
+
 " Vundle for bundle management!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -150,6 +152,9 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+"Bundle 'klen/python-mode'
+"Bundle 'davidhalter/jedi-vim'
 
 " vim.org scripts
 Bundle 'L9'
@@ -157,11 +162,13 @@ Bundle 'FuzzyFinder'
 Bundle 'mako.vim'
 Bundle 'indentpython.vim'
 Bundle 'taglist.vim'
-Bundle 'pep8'
-Bundle 'PySmell'
-Bundle 'pylint.vim'
-Bundle 'pyflakes.vim'
+"Bundle 'pep8'
+"Bundle 'PySmell'
+"Bundle 'pylint.vim'
+"Bundle 'pyflakes.vim'
 Bundle 'tslime.vim'
-Bundle 'python_match.vim'
+"Bundle 'python_match.vim'
 Bundle 'vim-coffee-script'
 Bundle 'csv.vim'
+Bundle 'switch.vim'
+Bundle 'py-coverage'
