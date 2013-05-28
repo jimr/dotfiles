@@ -1,0 +1,10 @@
+[extensions]
+color =
+crecord = /home/jrutherford/.hgext/crecord/crecord
+hgext.graphlog = 
+hgext.record =
+hgshelve = /home/jrutherford/.hgext/hgshelve.py
+prompt = /home/jrutherford/.hgext/prompt.py
+
+[ui]
+username = James Rutherford <jim@jimr.org>
