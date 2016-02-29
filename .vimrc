@@ -1,12 +1,12 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2013-02-08
+" Last Updated: 2014-04-24
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
 " set some useful defaults
-"colorscheme af         " nice color scheme
+"colorscheme jellybeans
 set tabstop=4           " set tabs to 4 spaces wide
 set softtabstop=4
 set shiftwidth=4        " # of spaces to use for each (auto) indent step
@@ -136,9 +136,17 @@ set background=dark     " default to dark background
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
+let g:ctrlp_open_new_file = 'v'
+
 " Vundle for bundle management!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+" Set the gutter colour to something that's not horrid
+hi SignColumn ctermbg=232 guibg=#080808
+
+" Set some ignores for ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp*.pyc,*.zip
 
 " base vundle, required
 Bundle 'gmarik/vundle'
@@ -155,6 +163,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 "Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
+Bundle 'airblade/vim-gitgutter'
 
 " vim.org scripts
 Bundle 'L9'
@@ -172,3 +181,4 @@ Bundle 'vim-coffee-script'
 Bundle 'csv.vim'
 Bundle 'switch.vim'
 Bundle 'py-coverage'
+Bundle 'gnupg'

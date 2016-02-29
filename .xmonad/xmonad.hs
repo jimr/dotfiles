@@ -29,7 +29,7 @@ main = do
                         , ppTitle = xmobarColor "green" "" . shorten 50
                         }
         , modMask = mod4Mask -- Rebind mod to super
-        , terminal = "terminator"
+        , terminal = "terminator -e 'tmux new-session -A -s scratch'"
         , borderWidth = 2
         }
         `additionalKeys`
