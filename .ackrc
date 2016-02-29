@@ -6,3 +6,6 @@ eco=.eco,.jeco
 
 --type-set
 coffee=.coffee
+
+--ignore-dir=.tox
+--ignore-dir=.cache
