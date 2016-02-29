@@ -93,23 +93,23 @@ function cdv () {
     fi
 }
 
-function import () {
-    if (( $# > 0 ))
-    then
-        python -i -c "$0 $@"
-    fi
-}
-
-function from () {
-    if (( $# > 0 ))
-    then
-        python -i -c "$0 $@"
-    fi
-}
+#function import () {
+#    if (( $# > 0 ))
+#    then
+#        python -i -c "$0 $@"
+#    fi
+#}
+#
+#function from () {
+#    if (( $# > 0 ))
+#    then
+#        python -i -c "$0 $@"
+#    fi
+#}
 
 function attach() {
-    if (( $# == 1 )); then
-        tmux attach-session -t $1
+    if (( $# != 0 )); then
+        tmux attach-session -t $@
     else
         echo "usage: attach <tmux session name>"
     fi
