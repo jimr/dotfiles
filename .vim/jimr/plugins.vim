@@ -1,7 +1,7 @@
 " File: maps.vim
 " Author: James Rutherford
 " Created: 2012-01-31
-" Last Updated: 2012-01-31
+" Last Updated: 2016-02-15
 " Description: Collected plugin configuration.
 
 " TagList configuration
@@ -14,3 +14,12 @@ let Tlist_Enable_Fold_Column = 0
 " default is <c-n>, which is stupid
 let g:sparkupNextMapping = '<c-x>'
 let g:pep8_map = ",p"
+
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_python_pylint_quiet_messages = {
+    \ "regex": [
+        \ "no-member",
+        \ "attribute-defined-outside-init",
+        \ "super-on-old-class",
+        \ "import-error"],
+    \ "level": "warnings" }
