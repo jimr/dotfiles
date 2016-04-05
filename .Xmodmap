@@ -1,3 +1,12 @@
+! Sequence on the right is:
+!  - key
+!  - shift+key
+!  - Mode_switch+key
+!  - Mode_switch+shift+key
+!  - AltGr+key
+!  - AltGr+Shift+key
+! Mode_switch is bound to left alt
+
 ! F<n> without the fn (who needs media keys?!)
 keycode 232 = F1
 keycode 233 = F2
@@ -22,6 +31,14 @@ keycode 123 = F12
 !keycode 49 = backslash bar
 !keycode 94 = grave asciitilde
 
+! Apple keyboard @/"/~ etc
+keycode 11 = 2 at twosuperior exclamdown
+keycode 12 = 3 sterling numbersign threesuperior
+keycode 48 = apostrophe quotedbl
+keycode 94 = grave asciitilde
+keycode 51 = backslash bar
+
 ! swap alt & super
 keycode 133 = Alt_L
-keycode 64 = Super_L
+!keycode 64 = Super_L
+keycode 64 = Mode_switch
