@@ -1,7 +1,7 @@
 Config { font = "xft:Monospaced-8:normal"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = Static { xpos = 3 , ypos = 0, width = 1360, height = 15 }
+       , position = Static { xpos = 3 , ypos = 0, width = 1920, height = 15 }
        , commands = [ Run Weather "EGGD" ["-t"," <tempC>C","-L","64","-H","77","--normal","green","--high","red","--low","lightblue"] 36000
                     , Run MultiCpu ["-t","CPU %: <autototal>","-L","3","-H","50","--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 100
