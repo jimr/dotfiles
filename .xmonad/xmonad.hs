@@ -35,10 +35,11 @@ main = do
         `additionalKeys`
         [ ((mod4Mask, xK_b), sendMessage ToggleStruts)
         , ((mod4Mask, xK_p), spawn "dmenu_run")
-        , ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
+--        , ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
+        , ((mod4Mask, xK_l), spawn "xscreensaver-command -lock")
         , ((mod4Mask, xK_x), spawn "xmodmap /home/jrutherford/.Xmodmap")
-        , ((mod1Mask, xK_Down), spawn "/home/jrutherford/bin/brightness.sh -10")
-        , ((mod1Mask, xK_Up), spawn "/home/jrutherford/bin/brightness.sh +10")
+        , ((mod1Mask, xK_Down), spawn "xbacklight -10")
+        , ((mod1Mask, xK_Up), spawn "xbacklight +10")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "scrot")
         ]
