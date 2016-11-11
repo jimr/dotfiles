@@ -162,3 +162,7 @@ bar {
 
 # disable title bar and border
 new_window none
+
+# adjust brightness
+bindsym Mod1+Up exec "xbacklight +10"
+bindsym Mod1+Down exec "xbacklight -10"
