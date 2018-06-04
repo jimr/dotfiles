@@ -1,10 +1,16 @@
 [color]
-	diff = auto
+    diff = auto
+[github]
+    user = jimr
 [diff]
     tool = vimdiff
 [alias]
-	incoming = "!git remote update -p; git log ..@{u}"
-	outgoing = log @{u}..
-[user]
-	name = James Rutherford
-	email = james.rutherford@maplecroft.com
+    incoming = "!git remote update -p; git log ..@{u}"
+    outgoing = log @{u}..
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+[rerere]
+    enabled = 1
+[push]
+    default = current
