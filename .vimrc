@@ -1,11 +1,12 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2014-04-24
+" Last Updated: 2018-05-24
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
 " set some useful defaults
+set background=dark     " default to dark background
 "colorscheme jellybeans
 set tabstop=4           " set tabs to 4 spaces wide
 set softtabstop=4
@@ -14,7 +15,7 @@ set expandtab           " expand tabs to spaces
 set backspace=indent,eol,start " make backspace delete lots of things
 "set autoindent          " use automatic indenting
 set smartindent         " use smart indenting
-"set foldenable          " enable code folding
+set nofoldenable          " enable code folding
 "set foldmethod=syntax
 set grepprg=grep\ -nH\ $    " required for latexsuite - sets :grep default
 set nrformats=alpha,hex " allows C-A and C-X to (de/in)crement letters & hex
@@ -131,8 +132,19 @@ let g:solarized_style="dark"
 let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 let g:solarized_visibility="high"
-set background=dark     " default to dark background
 "colorscheme solarized
+
+let g:switch_custom_definitions =
+    \ [
+    \   {
+    \     '\Cshow': 'hide',
+    \     '\Chide': 'show',
+    \   },
+    \   {
+    \     '\Cno': 'yes',
+    \     '\Cyes': 'no',
+    \   },
+    \ ]
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
@@ -164,6 +176,8 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
 Bundle 'airblade/vim-gitgutter'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'morhetz/gruvbox'
 
 " vim.org scripts
 Bundle 'L9'
@@ -180,5 +194,7 @@ Bundle 'tslime.vim'
 Bundle 'vim-coffee-script'
 Bundle 'csv.vim'
 Bundle 'switch.vim'
-Bundle 'py-coverage'
+"Bundle 'py-coverage'
 Bundle 'gnupg'
+
+colorscheme gruvbox
