@@ -34,7 +34,7 @@ compinit
 # use rsync to resume partial scp transfers
 alias scpr="rsync --partial --progress --rsh=ssh"
 
-export PYTHONSTARTUP=/home/jrutherford/.pystartup
+export PYTHONSTARTUP=/Users/jim/.pystartup
 
 function setdsm() {
     # add the current directory and the parent directory to PYTHONPATH

@@ -1,7 +1,7 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2014-04-24
+" Last Updated: 2019-11-23
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -12,7 +12,7 @@ set softtabstop=4
 set shiftwidth=4        " # of spaces to use for each (auto) indent step
 set expandtab           " expand tabs to spaces
 set backspace=indent,eol,start " make backspace delete lots of things
-"set autoindent          " use automatic indenting
+set autoindent          " use automatic indenting
 set smartindent         " use smart indenting
 "set foldenable          " enable code folding
 "set foldmethod=syntax
@@ -32,13 +32,18 @@ set wildmenu            " enable more advanced tab completion -- nice
 set title               " let xterm inherit the title according to vim
 set autoread            " auto-load a file that has changed outside of vim
                         " (but that hasn't been changed within vim)
-set formatoptions=tcqron        " this one does a few things:
-        " tc - auto wrap using textwidth (set to 80 with ,t)
-        " q  - allow formatting of comments with 'gq'
-        " ro - automatically insert the comment leader on the next line
-        " a  - automatically format paragraphs every time text is
-        "      inserted or deleted
-        " n  - when formatting, recognise numbered lists & auto-insert next
+
+set formatoptions=tn autoindent
+let &formatlistpat='^\s*\(\d\+[\]:.)}\t ]\|[*-]\s\)\s*'
+
+" this one does a few things:
+" - tc - auto wrap using textwidth (set to 80 with ,t)
+" - q  - allow formatting of comments with 'gq'
+" - ro - automatically insert the comment leader on the next line
+" - a  - automatically format paragraphs every time text is
+"        inserted or deleted
+" - n  - when formatting, recognise numbered lists & auto-insert next
+"set formatoptions=tcqron 
 set fileencodings+=default  " a sane fallback for encoding detection
 let html_use_css=1      " make :TOhtml use CSS instead of <font> lame-ness
 let use_xhtml=1         " make :TOhtml use XHTML instead of plain HTML
@@ -161,6 +166,7 @@ Bundle 'nvie/vim-flake8'
 Bundle 'juvenn/mustache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'wting/rust.vim'
 "Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
 Bundle 'airblade/vim-gitgutter'
@@ -182,3 +188,6 @@ Bundle 'csv.vim'
 Bundle 'switch.vim'
 Bundle 'py-coverage'
 Bundle 'gnupg'
+Bundle 'tagbar'
+
+au BufRead,BufNewFile *.rs set filetype=rust

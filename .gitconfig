@@ -8,3 +8,5 @@
 [user]
 	name = James Rutherford
 	email = jim@jimr.org
+[core]
+	excludesfile = /Users/jim/.gitignore_global
